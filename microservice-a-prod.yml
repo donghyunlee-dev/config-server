@@ -7,8 +7,6 @@ application:
   message: Message from default cloud server prod git repository!~~~~~~~!!!!@!@!@!
 
 spring:
-  config:
-    import: optional:configserver:http://172.18.0.2:8888
   rabbitmq:
     host: 172.18.0.5
     port: 5672
