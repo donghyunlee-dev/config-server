@@ -1,0 +1,5 @@
+management:
+  security:
+  enabled: false
+application:
+  message: Message from default cloud server prod git repository!~~~~~~~!!!!@!@!@!
