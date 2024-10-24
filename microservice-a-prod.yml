@@ -5,3 +5,37 @@ management:
   enabled: false
 application:
   message: Message from default cloud server prod git repository!~~~~~~~!!!!@!@!@!
+
+spring:
+  config:
+    import: optional:configserver:http://172.18.0.2:8888
+  rabbitmq:
+    host: 172.18.0.5
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    inetutils:
+      ignoredInterfaces:
+        - VirtualBox.*
+        - Hyper-V.*
+        - Npcap.*
+        - VMware.*
+
+
+management:
+  server:
+    port: ${server.port}
+  endpoints:
+    web:
+      exposure:
+        include: info, refresh, health, beans, env, busrefresh, metrics
+#      base-path: /management
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${server.port}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone : http://172.18.0.3:8761/eureka
