@@ -1,5 +1,12 @@
+server:
+  port: 9005
 management:
   security:
   enabled: false
 application:
+<<<<<<< HEAD
   message: de8b65433388c4c3114ddcd2ae3e5010d56dbb342f1c2f9d7d290e556b7839762288c4b3182415bcd6e1b9a86fa54475
+=======
+  message: Message from default cloud server prod git repository!~~~~~~~!!!!@!@!@!
+
+>>>>>>> a47f6c9fc04960aec4a56ef2b1bed83125ca3e21
